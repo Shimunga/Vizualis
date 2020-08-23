@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Vizualis</string>
+    <string name="nosaukTxt">Hello World!</string>
     <string name="avatar">Avatar</string>
+    <string name="avatar_descr">Avatar content description</string>
+    <string name="oneBtn">Button One</string>
+    <string name="twoBtn">Button Two</string>
+    <string name="threeBtn">Button Three</string>
+    <string name="fourBtn">Button Four</string>
+    <string name="fiveBtn">Button Five</string>
 </resources>
