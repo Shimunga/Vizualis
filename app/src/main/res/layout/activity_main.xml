@@ -74,7 +74,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:srcCompat="@tools:sample/avatars[3]" />
+                    app:srcCompat="@drawable/avatar_some"
+                    tools:srcCompat="@drawable/avatar_some" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
 
