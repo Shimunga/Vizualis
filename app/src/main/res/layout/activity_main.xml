@@ -17,7 +17,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainLyt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="648dp">
 
         <TextView
             android:id="@+id/nosaukTxt"
@@ -114,11 +114,11 @@
                     android:text="@string/twoBtn" />
 
                 <Button
-                    android:id="@+id/threeBtn"
+                    android:id="@+id/openChatBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/threeBtn" />
+                    android:text="@string/openChatBtn" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,6 +143,24 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/messageEd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/BtnLyt"
+            app:layout_constraintTop_toBottomOf="@+id/BtnLyt" />
+
+        <TextView
+            android:id="@+id/messageLb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/messageLb"
+            app:layout_constraintBottom_toBottomOf="@+id/messageEd"
+            tools:layout_editor_absoluteX="57dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -3,9 +3,14 @@
     <string name="nosaukTxt">Hello World!</string>
     <string name="avatar">Avatar</string>
     <string name="avatar_descr">Avatar content description</string>
-    <string name="oneBtn">Button One</string>
-    <string name="twoBtn">Button Two</string>
-    <string name="threeBtn">Button Three</string>
-    <string name="fourBtn">Button Four</string>
+    <string name="oneBtn">Click cnt</string>
+    <string name="twoBtn">Toast</string>
+    <string name="openChatBtn">Open Chat</string>
+    <string name="fourBtn">List Example</string>
     <string name="fiveBtn">Button Five</string>
+    <string name="messageLb">Enter message</string>
+    <string name="messageEd">Enter your message here</string>
+    <string name="sendBtn">Send</string>
+    <string name="replayBtn">Replay</string>
+    <string name="receivedLb">Message received:</string>
 </resources>
