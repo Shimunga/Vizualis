@@ -135,32 +135,38 @@
                     android:text="@string/fourBtn" />
 
                 <Button
-                    android:id="@+id/fiveBtn"
+                    android:id="@+id/scrollViewBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/fiveBtn" />
+                    android:onClick="onClickScrollViewBtn"
+                    android:text="@string/ScrollViewBtn" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineBtnLyt3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gridViewBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickGridViewBtn"
+                    android:text="@string/GridViewBtn" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ImageBlablaDescr" />
             </LinearLayout>
 
         </LinearLayout>
-
-        <EditText
-            android:id="@+id/messageEd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/BtnLyt"
-            app:layout_constraintTop_toBottomOf="@+id/BtnLyt" />
-
-        <TextView
-            android:id="@+id/messageLb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/messageLb"
-            app:layout_constraintBottom_toBottomOf="@+id/messageEd"
-            tools:layout_editor_absoluteX="57dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

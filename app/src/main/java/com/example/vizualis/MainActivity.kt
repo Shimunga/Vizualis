@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         openChatBtn.setOnClickListener {
-            onClickOpenChatBtn(it);
+            onClickOpenChatBtn(it)
         }
 
         fourBtn.setOnClickListener {
@@ -53,4 +53,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         Log.i(TAG, "Open Chat acitvity openened")
     }
+
+    fun onClickScrollViewBtn(v: View) {
+        val intent = Intent(this, ScrollViewActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "ScrollView Activity opened")
+    }
+
+    fun onClickGridViewBtn(v: View) {
+        val intent = Intent(this, GridExampleActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "GridView Activity opened")
+    }
+
 }

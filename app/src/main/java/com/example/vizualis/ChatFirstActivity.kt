@@ -7,8 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_chat_first.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.messageEd
+//import kotlinx.android.synthetic.main.activity_main.*
 
 class ChatFirstActivity : AppCompatActivity() {
     companion object {
@@ -24,7 +23,7 @@ class ChatFirstActivity : AppCompatActivity() {
     }
 
     fun onClickSendBtn(v: View) {
-        val message = messageEd.text.toString();
+        val message = messageEd.text.toString()
         val intent = Intent(this, ChatSecondActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE, message)
             }

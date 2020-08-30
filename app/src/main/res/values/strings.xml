@@ -13,4 +13,7 @@
     <string name="sendBtn">Send</string>
     <string name="replayBtn">Replay</string>
     <string name="receivedLb">Message received:</string>
+    <string name="ScrollViewBtn">Scroll View</string>
+    <string name="GridViewBtn">Grid View</string>
+    <string name="ImageBlablaDescr">Bla bla</string>
 </resources>

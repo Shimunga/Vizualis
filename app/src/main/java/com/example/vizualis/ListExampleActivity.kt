@@ -3,6 +3,7 @@ package com.example.vizualis
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_list_example.*
 
 class ListExampleActivity : AppCompatActivity() {
@@ -14,7 +15,13 @@ class ListExampleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_example)
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_selectable_list_item, items)
         mainItems.adapter = adapter
+
+        mainItems.setOnItemClickListener { _, _, position, _ ->
+            Toast.makeText(this, items[position], Toast.LENGTH_SHORT).show()
+        }
+
     }
+
 }
