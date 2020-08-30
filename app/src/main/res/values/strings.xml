@@ -16,4 +16,5 @@
     <string name="ScrollViewBtn">Scroll View</string>
     <string name="GridViewBtn">Grid View</string>
     <string name="ImageBlablaDescr">Bla bla</string>
+    <string name="quantity_text" translatable="false">%d %s</string>
 </resources>

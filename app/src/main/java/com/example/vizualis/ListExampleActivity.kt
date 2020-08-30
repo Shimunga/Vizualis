@@ -1,3 +1,4 @@
+//Array adapter
 package com.example.vizualis
 
 import androidx.appcompat.app.AppCompatActivity
@@ -16,9 +17,9 @@ class ListExampleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list_example)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_selectable_list_item, items)
-        mainItems.adapter = adapter
+        mainItemsGrd.adapter = adapter
 
-        mainItems.setOnItemClickListener { _, _, position, _ ->
+        mainItemsGrd.setOnItemClickListener { _, _, position, _ ->
             Toast.makeText(this, items[position], Toast.LENGTH_SHORT).show()
         }
 

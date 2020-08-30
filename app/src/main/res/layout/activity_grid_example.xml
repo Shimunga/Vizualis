@@ -7,13 +7,14 @@
     tools:context=".GridExampleActivity">
 
     <GridView
-        android:id="@+id/mainItems"
+        android:id="@+id/mainItemsGrd"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
+        android:numColumns="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
