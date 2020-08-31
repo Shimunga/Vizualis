@@ -16,14 +16,14 @@ class ShoppingItemAdapter(context: Context, items: List<ShoppingItem>) :
         val view = convertView ?: LayoutInflater.from(context)
             .inflate(R.layout.item_shopping, parent, false)
 
-        val item = getItem(position)
+        val item = getItem(position)!!
 
-        view.shoppingName.text = item?.name
+        view.titleTxt.text = item.name
         view.shoppingQuantity.text = context.resources
-            .getString(R.string.quantity_text, item?.quantity, item?.unit)
+            .getString(R.string.quantity_text, item.quantity, item.unit)
 
         view.setOnClickListener {
-            Toast.makeText(context, item?.name, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, item.name, Toast.LENGTH_SHORT).show()
         }
 
         return view

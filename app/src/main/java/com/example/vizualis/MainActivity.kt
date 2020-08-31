@@ -66,4 +66,9 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "GridView Activity opened")
     }
 
+    fun onClickRecyclerBtn(v: View) {
+        val intent = Intent(this, RecycleViewActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "Recycler Activity opened")
+    }
 }

@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?selectableItemBackground"
+    android:layout_alignParentLeft="false"
+    android:layout_alignParentRight="false"
+    android:layout_gravity="right"
+    android:background="#FFFFFF"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toLeftOf="parent">
 
     <CheckBox
         android:id="@+id/shoppingCheck"
@@ -17,9 +22,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/shoppingName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/titleTxt"
+        android:layout_width="69dp"
+        android:layout_height="20dp"
         android:layout_margin="@dimen/default_margin"
         android:textSize="@dimen/text_title"
         android:textStyle="bold"
@@ -35,7 +40,7 @@
         android:layout_margin="@dimen/default_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/shoppingRemove"
-        app:layout_constraintTop_toBottomOf="@id/shoppingName"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt"
         tools:text="10 kg" />
 
     <ImageButton

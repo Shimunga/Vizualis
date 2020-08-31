@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GridExampleActivity"/>
+        <activity android:name=".RecycleViewActivity"/>
+        <activity android:name=".GridExampleActivity" />
         <activity android:name=".ScrollViewActivity" />
         <activity android:name=".ChatSecondActivity" />
         <activity android:name=".ChatFirstActivity" />

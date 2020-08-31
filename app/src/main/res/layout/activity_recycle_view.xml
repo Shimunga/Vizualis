@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GridExampleActivity">
+    tools:context=".RecycleViewActivity">
 
     <EditText
         android:id="@+id/itemEd"
@@ -15,33 +15,34 @@
         android:layout_marginEnd="4dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Labdien kuuk tralala"
         app:layout_constraintEnd_toStartOf="@+id/addBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addBtn"
-        android:layout_width="0dp"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:onClick="onClickAddBtn"
         android:text="@string/AddBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/itemEd" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainItemsGrd"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        android:background="#FFFFFF"
-        android:numColumns="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemEd" />
+        app:layout_constraintTop_toBottomOf="@+id/itemEd"
+        tools:listitem="@layout/item_shopping_card" />
 </androidx.constraintlayout.widget.ConstraintLayout>

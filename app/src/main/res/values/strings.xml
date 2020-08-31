@@ -17,4 +17,6 @@
     <string name="GridViewBtn">Grid View</string>
     <string name="ImageBlablaDescr">Bla bla</string>
     <string name="quantity_text" translatable="false">%d %s</string>
+    <string name="AddBtn">Add</string>
+    <string name="recyclerBtn">Recycler</string>
 </resources>
