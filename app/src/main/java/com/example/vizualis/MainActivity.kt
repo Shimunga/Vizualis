@@ -71,4 +71,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         Log.i(TAG, "Recycler Activity opened")
     }
+
+    fun onClickIncludeBtn(v: View) {
+        val intent = Intent(this, IncludeActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "Include")
+    }
+    fun onClickStylesBtn(v: View) {
+        val intent = Intent(this, StylesThemesActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "Styles Themes")
+    }
+
 }
