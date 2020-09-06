@@ -3,11 +3,14 @@ package lv.romstr.mobile.rtu_android
 import android.annotation.SuppressLint
 import java.util.Random
 
-sealed class KeepItem
-
-data class KeepItemText(val title: String, val text: String) : KeepItem()
-
-data class KeepItemImage(val uri: String) : KeepItem()
+sealed class KeepItem{
+    var title: String =""
+    constructor(title: String){
+        this.title = title
+    }
+}
+data class KeepItemText(val _title: String, val text: String) : KeepItem(_title)
+data class KeepItemImage(val _title: String, val uri: String) : KeepItem(_title)
 
 object RandomData {
 
@@ -45,14 +48,15 @@ object RandomData {
     private val randomSize
         get() = random.nextInt(LIST_SIZE)
 
-    private val randomItem
+    val randomItem
         get() = if (random.nextBoolean()) textItem else imageItem
+        //get() = imageItem
 
     val items
         get() = MutableList(randomSize) { randomItem }
 
     val textItem get() = KeepItemText(randomTitle, randomLorem)
 
-    val imageItem get() = KeepItemImage(randomUri)
+    val imageItem get() = KeepItemImage(randomTitle,randomUri)
 
 }

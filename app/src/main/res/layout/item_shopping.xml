@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titleTxt"
+        android:id="@+id/imageTitleTxt"
         android:layout_width="69dp"
         android:layout_height="20dp"
         android:layout_margin="@dimen/default_margin"
@@ -39,12 +39,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/shoppingRemove"
-        app:layout_constraintTop_toBottomOf="@id/titleTxt"
+        app:layout_constraintEnd_toStartOf="@id/removeBtn"
+        app:layout_constraintTop_toBottomOf="@id/imageTitleTxt"
         tools:text="10 kg" />
 
     <ImageButton
-        android:id="@+id/shoppingRemove"
+        android:id="@+id/removeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/ImageBlablaDescr"

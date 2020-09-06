@@ -18,7 +18,7 @@ class ShoppingItemAdapter(context: Context, items: List<ShoppingItem>) :
 
         val item = getItem(position)!!
 
-        view.titleTxt.text = item.name
+        view.imageTitleTxt.text = item.name
         view.shoppingQuantity.text = context.resources
             .getString(R.string.quantity_text, item.quantity, item.unit)
 
