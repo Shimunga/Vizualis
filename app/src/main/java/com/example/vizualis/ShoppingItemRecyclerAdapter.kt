@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_recycle_view.*
 import kotlinx.android.synthetic.main.item_shopping_card.view.*
 
 class ShoppingItemRecyclerAdapter(private val items: List<RecycleViewActivity.ShoppingItemCard>) :
-   RecyclerView.Adapter<ShoppingItemRecyclerAdapter. ShoppingViewHolder>() {
+   RecyclerView.Adapter<ShoppingItemRecyclerAdapter.ShoppingViewHolder>() {
 
    //Define view holder class
    class ShoppingViewHolder(view: View) : RecyclerView.ViewHolder(view)
@@ -28,9 +29,16 @@ class ShoppingItemRecyclerAdapter(private val items: List<RecycleViewActivity.Sh
       val context = holder.itemView.context
       holder.itemView.titleTxt.text = item.title
       holder.itemView.descriptionTxt.text = item.description
+      //holder.itemView.shoppingRemove.setOnClickListener(OnClickDeleteBtn)
 
       holder.itemView.setOnClickListener {
          Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
       }
+
+      holder.itemView.shoppingRemove.setOnClickListener{
+         (items as MutableList).remove(item)
+         notifyDataSetChanged()
+      }
+
    }
 }

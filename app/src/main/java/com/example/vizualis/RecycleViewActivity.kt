@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_recycle_view.*
+import java.util.*
 
 class RecycleViewActivity : AppCompatActivity() {
    companion object {
@@ -32,7 +33,13 @@ class RecycleViewActivity : AppCompatActivity() {
    fun onClickAddBtn(v: View) {
       val name = itemEd.text.toString()
       Log.d(TAG, "Add item " + name)
-      shoppingItems.add(ShoppingItemCard(name, "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical "))
+      shoppingItems.add(0, ShoppingItemCard(name, "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical "))
       mainItemsGrd.adapter?.notifyDataSetChanged()
+      itemEd.setText("some text " + (1000..9999).random().toString())
    }
+
+   fun onClickSortBtn(view: View) {
+      //shoppingItems.sortedBy{view.transitionName}
+   }
+
 }

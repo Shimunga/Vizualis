@@ -19,4 +19,6 @@
     <string name="quantity_text" translatable="false">%d %s</string>
     <string name="AddBtn">Add</string>
     <string name="recyclerBtn">Recycler</string>
+    <string name="DeleteBtn">Delete</string>
+    <string name="hello_world">Hello Round World!</string>
 </resources>
