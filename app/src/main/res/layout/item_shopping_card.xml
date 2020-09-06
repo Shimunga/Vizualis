@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentLeft="false"
-    android:layout_alignParentRight="false"
-    android:layout_gravity="right"
     android:clickable="true"
-    android:clipToPadding="false"
     android:focusable="true"
-    app:layout_constraintLeft_toRightOf="parent"
-    app:layout_constraintRight_toLeftOf="parent">
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <!-- android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp" -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bodyLay"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
+        android:padding="16dp"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,15 +41,17 @@
 
         <TextView
             android:id="@+id/descriptionTxt"
-            android:layout_width="386dp"
-            android:layout_height="96dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
-            android:text="TextView"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/titleTxt"
-            app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/titleTxt"
+            app:layout_constraintVertical_bias="0.294"/>
 
         <ImageButton
             android:id="@+id/shoppingRemove"
@@ -61,4 +62,4 @@
             app:layout_constraintTop_toTopOf="@+id/titleTxt"
             app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

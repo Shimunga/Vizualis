@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -41,7 +42,21 @@
         android:onClick="onClickSortBtn"
         android:text="Sort"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="7dp" />
+        tools:layout_editor_absoluteY="7dp"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/staggLinearSwitch"
+        android:layout_width="156dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:checked="false"
+        android:text="Linear/Staggered"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemEd"
+
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainItemsGrd"
@@ -51,12 +66,15 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemEd"
+        app:layout_constraintTop_toBottomOf="@+id/staggLinearSwitch"
         tools:listitem="@layout/item_shopping_card" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
