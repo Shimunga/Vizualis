@@ -1,5 +1,6 @@
 package com.example.vizualis
 
+import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,20 +17,29 @@ class MainActivity : AppCompatActivity() {
     private var clicks = 0
     companion object {
         const val TAG = "MainActivity"
+        const val CLICKS_EXTRA = "ClicksExtra"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.i(TAG, "Created")
-
-        nosaukTxt.text = (++clicks).toString() //sākotnējā inkrementētā vērtība
+//        clicks = savedInstanceState?.getInt(CLICKS_EXTRA) ?: 0
+        clicks = getPreferences(Application.MODE_PRIVATE)
+            .getInt(CLICKS_EXTRA, 0)
+        nosaukTxt.text = clicks.toString() //sākotnējā inkrementētā vērtība
         Log.i(TAG, "Initial counter value assigned")
         //findViewById<TextView>(R.id.nosaukTxt).text = (++clicks).toString() //sākotnējā inkrementētā vērtība
+
 
         oneBtn.setOnClickListener {
             nosaukTxt.text = (++clicks).toString()  //klikšķa listenera darbība
             Log.i(TAG, "Counter increment clicked")
+
+            getPreferences(Application.MODE_PRIVATE)
+                .edit()
+                .putInt(CLICKS_EXTRA, clicks)
+                .apply()
         }
 
         twoBtn.setOnClickListener {
@@ -45,7 +55,13 @@ class MainActivity : AppCompatActivity() {
             val listPage = Intent(this, ListExampleActivity::class.java)
             startActivity(listPage)
             Log.i(TAG, "List act. opened")
+
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(CLICKS_EXTRA, clicks)
     }
 
     fun onClickOpenChatBtn(v: View) {
@@ -81,6 +97,12 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, StylesThemesActivity::class.java)
         startActivity(intent)
         Log.i(TAG, "Styles Themes")
+    }
+
+    fun onClickDatabaseSampleBtn(v: View) {
+        val intent = Intent(this, DatabaseSampleActivity::class.java)
+        startActivity(intent)
+        Log.i(TAG, "DatabaseSampleActivity button clicked")
     }
 
 }

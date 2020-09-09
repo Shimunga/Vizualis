@@ -39,6 +39,9 @@ class RecycleViewActivity : AppCompatActivity() {
       shoppingItems.addAll(0, RandomData.items)
 
       staggLinearSwitch.setOnCheckedChangeListener { _, isChecked -> switchLayouts(isChecked) }
+
+
+
    }
 
    fun onClickAddBtn(v: View) {

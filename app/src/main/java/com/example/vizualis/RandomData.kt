@@ -26,10 +26,10 @@ object RandomData {
 
     private const val LIST_SIZE = 10
 
-    private val randomLorem
+    val randomLorem
         get() = LOREM.take(random.nextInt(LOREM.length))
 
-    private val randomTitle
+    val randomTitle
         @SuppressLint("DefaultLocale")
         get() = with(LOREM.split(" ")) {
             this[random.nextInt(size)].capitalize()
