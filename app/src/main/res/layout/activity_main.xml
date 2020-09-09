@@ -197,6 +197,14 @@
                     android:layout_weight="1"
                     android:onClick="onClickDatabaseSampleBtn"
                     android:text="DB sample" />
+
+                <Button
+                    android:id="@+id/alertsTabsPagesBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickAlertsTabsPagesBtn"
+                    android:text="Alerts Tabs Pages" />
             </LinearLayout>
 
         </LinearLayout>

@@ -105,4 +105,9 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "DatabaseSampleActivity button clicked")
     }
 
+    fun onClickAlertsTabsPagesBtn(view: View) {
+        val intent = Intent(this, AlertsTabsPagesActivity::class.java)
+        startActivity(intent)
+    }
+
 }

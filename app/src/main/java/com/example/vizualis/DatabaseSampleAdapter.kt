@@ -1,9 +1,13 @@
 package com.example.vizualis
 
+import android.app.Dialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_shopping.view.*
@@ -28,21 +32,43 @@ class DatabaseSampleAdapter(
    // Need to return item count
    override fun getItemCount() = items.size
 
+   var context: Context? = null
+   var item: ShoppingItemForDb? = null
+
    override fun onBindViewHolder(holder: ShoppingViewHolder, position: Int) {
-      val item = items[position]
-      val context = holder.itemView.context
-      holder.itemView.titleTxt.text = item.title
-      holder.itemView.descriptionTxt.text = item.text
+      item = items[position]
+      context = holder.itemView.context
+      holder.itemView.titleTxt.text = item?.title
+      holder.itemView.descriptionTxt.text = item?.text
 
       holder.itemView.setOnClickListener {
-         Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+         Toast.makeText(context, item?.title, Toast.LENGTH_SHORT).show()
       }
 
+
       holder.itemView.removeBtn1.setOnClickListener{
-         val currPos = items.indexOf(item)
-         listener.deleteClicked(items[currPos])
-         items.removeAt(currPos)
-         notifyDataSetChanged()
+         //deleteItem(items.indexOf(item))
+         WannaDelete()
       }
    }
+
+   private fun WannaDelete(){
+      val builder = AlertDialog.Builder(context!!)
+      builder.setTitle("Title")
+         .setMessage("Lorem ipsum blablabla")
+         .setPositiveButton("ok") { dialog, id ->
+            deleteItem(items.indexOf(item))
+         }
+         .setNegativeButton("cancel") { _, _ -> }
+         .setNeutralButton("remind me later") { _, _ -> }
+      val dialog = builder.create()
+      dialog.show()
+   }
+
+   private fun deleteItem (position: Int) {
+      listener.deleteClicked(items[position])
+      items.removeAt(position)
+      notifyDataSetChanged()
+   }
+
 }
