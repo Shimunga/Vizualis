@@ -110,4 +110,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun onClickOpenFragActivBtn(view: View) {
+        val intent = Intent(this, SimpleFragmentActivity::class.java)
+        startActivity(intent)
+    }
+
 }

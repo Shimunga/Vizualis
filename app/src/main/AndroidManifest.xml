@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AlertsTabsPagesActivity"></activity>
+        <activity android:name=".SimpleFragmentActivity"></activity>
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".AlertsTabsPagesActivity" />
         <activity android:name=".DatabaseSampleActivity" />
         <activity android:name=".CardViewActivity" />
         <activity android:name=".StylesThemesActivity" />
