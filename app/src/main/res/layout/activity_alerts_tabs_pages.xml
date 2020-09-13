@@ -45,4 +45,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/showListDialog" />
 
+    <Button
+        android:id="@+id/showCustomDialogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onClickCustomDialogBtn"
+        android:text="Show Custom Layout Dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showMultiChoiceDialogBtn" />
+
+    <Button
+        android:id="@+id/showFragmentDialogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onClickFragmentDialogBtn"
+        android:text="Show Fragment Dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showCustomDialogBtn" />
+
+    <Button
+        android:id="@+id/showDatePickerDialogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onClickDatePickerDialogBtn"
+        android:text="Show Date Picker Dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showFragmentDialogBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

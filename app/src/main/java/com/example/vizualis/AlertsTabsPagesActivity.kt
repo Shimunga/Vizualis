@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
 
-class AlertsTabsPagesActivity : AppCompatActivity() {
+class AlertsTabsPagesActivity : AppCompatActivity()/*, ProductDialogFragment.NoticeDialogListener */{
 
    override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -75,4 +76,44 @@ class AlertsTabsPagesActivity : AppCompatActivity() {
       val dialog = builder.create()
       dialog.show()
    }
+
+   fun onClickCustomDialogBtn(view: View) {
+      val builder = AlertDialog.Builder(this)
+      builder
+         .setTitle("Title")
+         .setView(R.layout.dialog_custom)
+         .setPositiveButton("ok") { dialog, id ->
+            Toast.makeText(
+               this,
+               "Custom dialog Ok clicked",
+               Toast.LENGTH_SHORT
+            ).show()
+         }
+         .setNegativeButton("cancel"){ _, _ ->}
+      val dialog = builder.create()
+      dialog.show()
+   }
+
+   fun onClickFragmentDialogBtn(view: View) {
+      val dialogFragment = ProductDialogFragment()
+      dialogFragment.show(this.supportFragmentManager, null)
+   }
+
+/*   override fun onDialogPositiveClick(dialog: DialogFragment) {
+      Toast.makeText(
+         this,
+         "Ok from fragment dialog handler",
+         Toast.LENGTH_SHORT
+      ).show()
+   }
+
+   override fun onDialogNegativeClick(dialog: DialogFragment) {
+      TODO("Not yet implemented")
+   }*/
+
+   fun onClickDatePickerDialogBtn(view: View) {
+      val datePickerFragment = DatePickerFragment()
+      datePickerFragment.show(supportFragmentManager,"datePicker")
+   }
+
 }
