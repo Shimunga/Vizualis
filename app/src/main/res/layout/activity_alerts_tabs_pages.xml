@@ -15,10 +15,34 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="377dp"
         android:onClick="onClickShowDialogBtn"
-        android:text="Show Dialog"
+        android:text="Show Simple Alert Dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/showListDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onClickListDialogBtn"
+        android:text="Show List Dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showDialogBtn" />
+
+    <Button
+        android:id="@+id/showMultiChoiceDialogBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onClickMultiChoiceDialogBtn"
+        android:text="Show List Dialog"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showListDialog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
