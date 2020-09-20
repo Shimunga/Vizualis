@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.recycleviewscollview
 
 import android.os.Bundle
 import android.util.Log
@@ -6,10 +6,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.vizualis.R
 import kotlinx.android.synthetic.main.activity_recycle_view.*
-import lv.romstr.mobile.rtu_android.KeepItem
-import lv.romstr.mobile.rtu_android.KeepItemText
-import lv.romstr.mobile.rtu_android.RandomData
+import com.example.vizualis.keepitem.*
+import com.example.vizualis.shopping.ShoppingItemRecyclerAdapter
 
 class RecycleViewActivity : AppCompatActivity() {
    companion object {
@@ -33,7 +33,8 @@ class RecycleViewActivity : AppCompatActivity() {
       super.onCreate(savedInstanceState)
       setContentView(R.layout.activity_recycle_view)
       //setup adapter
-      val adapter = ShoppingItemRecyclerAdapter(shoppingItems)
+      val adapter =
+         ShoppingItemRecyclerAdapter(shoppingItems)
       mainItemsGrd.adapter = adapter
 
       shoppingItems.addAll(0, RandomData.items)

@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.shopping
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.vizualis.R
+import com.example.vizualis.keepitem.*
 import kotlinx.android.synthetic.main.item_shopping_card.view.*
 import kotlinx.android.synthetic.main.item_shopping_card_img.view.*
-import lv.romstr.mobile.rtu_android.*
 import kotlinx.android.synthetic.main.item_shopping_card.view.removeBtn as removeBtn1
 
 class ShoppingItemRecyclerAdapter(private val items: MutableList<KeepItem>) :

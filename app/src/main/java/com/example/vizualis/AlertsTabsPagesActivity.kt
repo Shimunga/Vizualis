@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.DialogFragment
+import com.example.vizualis.fragment.DatePickerFragment
+import com.example.vizualis.fragment.ProductDialogFragment
 
 class AlertsTabsPagesActivity : AppCompatActivity()/*, ProductDialogFragment.NoticeDialogListener */{
 

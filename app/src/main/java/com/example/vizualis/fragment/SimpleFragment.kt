@@ -1,14 +1,12 @@
-package com.example.vizualis
+package com.example.vizualis.fragment
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import kotlinx.android.synthetic.main.dialog_custom.view.*
+import com.example.vizualis.R
 import kotlinx.android.synthetic.main.fragment_simple.view.*
 import kotlinx.android.synthetic.main.fragment_simple.view.textView
 
@@ -36,10 +34,8 @@ class SimpleFragment : Fragment() {
          //Toast.makeText(context, message, Toast.LENGTH_LONG).show()
       }
    }
-//   fun onClickFragmentBtn(view: View) {
-//      listener?.onButtonPressed("Pressed from fragment!")
-//   }
-   companion object {
+
+      companion object {
       fun newInstance(message: String): SimpleFragment {
          val fragment = SimpleFragment()
          val args = Bundle()

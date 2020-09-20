@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.chat
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.vizualis.ChatFirstActivity.Companion.EXTRA_MESSAGE
-import com.example.vizualis.ChatFirstActivity.Companion.EXTRA_REPLY
+import com.example.vizualis.R
+import com.example.vizualis.chat.ChatFirstActivity.Companion.EXTRA_MESSAGE
+import com.example.vizualis.chat.ChatFirstActivity.Companion.EXTRA_REPLY
 import kotlinx.android.synthetic.main.activity_chat_first.*
 import kotlinx.android.synthetic.main.activity_chat_first.messageEd
-import kotlinx.android.synthetic.main.activity_main.*
 
 class ChatSecondActivity : AppCompatActivity() {
     companion object {

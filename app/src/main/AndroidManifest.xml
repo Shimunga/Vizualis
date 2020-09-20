@@ -11,18 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SimpleFragmentActivity"></activity>
-        <activity android:name=".FragmentActivity" />
+        <activity android:name=".clicker.ClickerActivity"></activity>
+        <activity android:name=".clicker_mvvm.ClickerActivity"></activity>
+        <activity android:name=".fragment.SimpleFragmentActivity" />
         <activity android:name=".AlertsTabsPagesActivity" />
-        <activity android:name=".DatabaseSampleActivity" />
+        <activity android:name=".shopping.DatabaseSampleActivity" />
         <activity android:name=".CardViewActivity" />
         <activity android:name=".StylesThemesActivity" />
         <activity android:name=".IncludeActivity" />
-        <activity android:name=".RecycleViewActivity" />
+        <activity android:name=".recycleviewscollview.RecycleViewActivity" />
         <activity android:name=".GridExampleActivity" />
-        <activity android:name=".ScrollViewActivity" />
-        <activity android:name=".ChatSecondActivity" />
-        <activity android:name=".ChatFirstActivity" />
+        <activity android:name=".recycleviewscollview.ScrollViewActivity" />
+        <activity android:name=".chat.ChatSecondActivity" />
+        <activity android:name=".chat.ChatFirstActivity" />
         <activity android:name=".ListExampleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

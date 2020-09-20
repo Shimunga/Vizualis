@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.chat
 
 import android.app.Activity
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.vizualis.R
 import kotlinx.android.synthetic.main.activity_chat_first.*
 //import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,7 +29,9 @@ class ChatFirstActivity : AppCompatActivity() {
             putExtra(EXTRA_MESSAGE, message)
             }
         Log.d(TAG, "to start ChatSecondActivity")
-        startActivityForResult(intent, DETAIL_REQUEST)
+        startActivityForResult(intent,
+           DETAIL_REQUEST
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -36,7 +39,9 @@ class ChatFirstActivity : AppCompatActivity() {
         Log.d(TAG, "onActivityResult")
         if (requestCode == DETAIL_REQUEST && resultCode == Activity.RESULT_OK) {
             data?.let {
-                messageTxt.append(if (messageTxt.text == "") data.getStringExtra(EXTRA_REPLY) else System.lineSeparator() + data.getStringExtra(EXTRA_REPLY))
+                messageTxt.append(if (messageTxt.text == "") data.getStringExtra(EXTRA_REPLY) else System.lineSeparator() + data.getStringExtra(
+                   EXTRA_REPLY
+                ))
             }
         }
     }

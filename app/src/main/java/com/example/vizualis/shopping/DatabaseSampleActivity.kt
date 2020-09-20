@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.shopping
 
 import android.os.Bundle
 import android.util.Log
@@ -6,10 +6,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.vizualis.R
+import com.example.vizualis.keepitem.*
 import kotlinx.android.synthetic.main.activity_database_sample.*
-import lv.romstr.mobile.rtu_android.RandomData
 
-class DatabaseSampleActivity : AppCompatActivity(), AdapterEventListener {
+
+class DatabaseSampleActivity : AppCompatActivity(),
+   AdapterEventListener {
 
    private val shoppingItemsForDb = mutableListOf<ShoppingItemForDb>()
 
@@ -23,7 +26,11 @@ class DatabaseSampleActivity : AppCompatActivity(), AdapterEventListener {
       shoppingItemsForDb.addAll(db.shoppingItemForDbDao().getAll())
 
       //setup adapter
-      val adapter = DatabaseSampleAdapter(this, shoppingItemsForDb )
+      val adapter =
+         DatabaseSampleAdapter(
+            this,
+            shoppingItemsForDb
+         )
       mainItemsGrd.adapter = adapter
 
       //shoppingItems.addAll(0, RandomData.items)
@@ -33,7 +40,10 @@ class DatabaseSampleActivity : AppCompatActivity(), AdapterEventListener {
 
    fun onClickAddBtn(v: View) {
       val name = itemEd.text.toString()
-      val itemNew = ShoppingItemForDb(name, RandomData.randomLorem)
+      val itemNew = ShoppingItemForDb(
+         name,
+         RandomData.randomLorem
+      )
       shoppingItemsForDb.add(0, itemNew) //RandomData.randomItem
 
       //repaints all elements

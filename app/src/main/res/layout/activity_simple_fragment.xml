@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimpleFragmentActivity">
+    tools:context=".fragment.SimpleFragmentActivity">
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.vizualis.SimpleFragment"
+        android:name="com.example.vizualis.fragment.SimpleFragment"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.shopping
 
 import android.content.Context
 import androidx.room.*
@@ -11,7 +11,8 @@ abstract class ShoppingDatabase: RoomDatabase(){
 
 object Database {
    private var instance: ShoppingDatabase? = null
-   fun getInstance(context: Context) = instance ?: Room.databaseBuilder(
+   fun getInstance(context: Context) = instance
+      ?: Room.databaseBuilder(
       context.applicationContext, ShoppingDatabase::class.java, "shopping-db"
    ).allowMainThreadQueries()
       .build()

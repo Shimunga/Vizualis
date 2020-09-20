@@ -1,10 +1,12 @@
-package com.example.vizualis
+package com.example.vizualis.fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.vizualis.R
 
-class SimpleFragmentActivity : AppCompatActivity(), ButtonPressedListener {
+class SimpleFragmentActivity : AppCompatActivity(),
+   ButtonPressedListener {
    override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
 

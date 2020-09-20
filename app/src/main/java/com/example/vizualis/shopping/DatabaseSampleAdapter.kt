@@ -1,18 +1,14 @@
-package com.example.vizualis
+package com.example.vizualis.shopping
 
-import android.app.Dialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.item_shopping.view.*
+import com.example.vizualis.R
 import kotlinx.android.synthetic.main.item_shopping_card.view.*
-import lv.romstr.mobile.rtu_android.*
 import kotlinx.android.synthetic.main.item_shopping_card.view.removeBtn as removeBtn1
 
 class DatabaseSampleAdapter(
@@ -26,7 +22,9 @@ class DatabaseSampleAdapter(
    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingViewHolder {
       val view =
          LayoutInflater.from(parent.context).inflate(R.layout.item_shopping_card, parent, false)
-      return ShoppingViewHolder(view)
+      return ShoppingViewHolder(
+         view
+      )
    }
 
    // Need to return item count

@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.shopping
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.example.vizualis.R
+import com.example.vizualis.ShoppingItem
 import kotlinx.android.synthetic.main.item_shopping.view.*
 
 class ShoppingItemAdapter(context: Context, items: List<ShoppingItem>) :

@@ -1,14 +1,12 @@
 package com.example.vizualis
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_chat_first.*
+import com.example.vizualis.shopping.ShoppingItemAdapter
 import kotlinx.android.synthetic.main.activity_grid_example.*
 
 
@@ -41,7 +39,8 @@ class GridExampleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_grid_example)
 
         //setup adapter
-        val adapter = ShoppingItemAdapter(this, shoppingItems)
+        val adapter =
+           ShoppingItemAdapter(this, shoppingItems)
         mainItemsGrd.adapter = adapter
 
         mainItemsGrd.setOnItemClickListener { _, _, position, _ ->

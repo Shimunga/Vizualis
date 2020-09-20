@@ -1,4 +1,4 @@
-package com.example.vizualis
+package com.example.vizualis.fragment
 
 import android.app.DatePickerDialog
 import android.app.Dialog

@@ -1,4 +1,4 @@
-package lv.romstr.mobile.rtu_android
+package com.example.vizualis.keepitem
 
 import android.annotation.SuppressLint
 import java.util.Random
