@@ -46,6 +46,7 @@ class DatabaseSampleAdapter(
 
       holder.itemView.removeBtn1.setOnClickListener{
          //deleteItem(items.indexOf(item))
+         it.tag
          WannaDelete()
       }
    }
